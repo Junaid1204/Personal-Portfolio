@@ -21,3 +21,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(changeText, 3000); // Change text every 3 seconds
 });
+const text1 = document.getElementById("text1");
+const text2 = document.getElementById("text2");
+let isText1Visible = true;
+
+setInterval(() => {
+    if (isText1Visible) {
+        text1.style.opacity = 0;
+        text2.style.opacity = 1;
+    } else {
+        text1.style.opacity = 1;
+        text2.style.opacity = 0;
+    }
+    isText1Visible = !isText1Visible;
+}, 1500); // Switch every 3 seconds
+const nav = document.querySelector("nav");
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", () => {
+    let scrollTop = window.scrollY;
+
+    if (scrollTop > lastScrollTop) {
+        nav.style.transform = "translate(-50%, -100%)"; // Hide while keeping it centered
+    } else if (scrollTop === 0) {
+        nav.style.transform = "translateX(-50%)"; // Show again at top
+    }
+
+    lastScrollTop = scrollTop;
+});
