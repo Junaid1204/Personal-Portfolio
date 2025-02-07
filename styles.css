@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #111;
+}
+
+.logo {
+    font-size: 28px;
+    color: red;
+    font-weight: bold;
+    position: absolute;
+    left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+.highlight {
+    color: white;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.profile-picture img {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Spacing between projects */
+    padding: 50px 10%;
+}
+
+/* Individual Project Layout */
+.project {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between image & text */
+}
+
+/* Project Image */
+.project img {
+    width: 50%; /* Big image on the left */
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Project Info */
+.project-info {
+    width: 50%;
+}
+
+.project-info h2 {
+    font-size: 24px;
+    color: white;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+}
+/* Funky Heading for Design Projects */
+.funky-heading {
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ff4d00;
+    position: relative;
+    margin-bottom: 30px;
+    font-family: "Poppins", sans-serif;
+    text-shadow: 3px 3px 10px rgba(255, 77, 0, 0.8);
+}
+
+/* Underline Animation */
+.funky-heading::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, #ff4d00, #ff9900);
+    transform: translateX(-50%);
+    animation: underline-glow 1.5s infinite alternate ease-in-out;
+}
+
+
+@keyframes underline-glow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 77, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 153, 0, 0.9);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column; /* Stack images and text on smaller screens */
+        text-align: center;
+    }
+
+    .project img, .project-info {
+        width: 100%;
+    }
+}
+
+/* Blinking & Sliding Funky Effect */
+@keyframes fadeOut {
+    0% { opacity: 1; transform: translateX(0); }
+    100% { opacity: 0; transform: translateX(20px) rotate(5deg); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateX(-20px) rotate(-5deg); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards ease-in-out;
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards ease-in-out;
+}
