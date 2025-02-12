@@ -1,0 +1,426 @@
+/* General Styles */
+body {
+    background: #111;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #111;
+}
+.dynamic-title {
+    
+    position: relative;
+    width: 400px;
+    height: 40px;
+    overflow: hidden;
+    
+}
+.dynamic-title span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.8s ease-in-out;
+}
+#text1 {
+    opacity: 1;
+}
+
+.logo {
+    
+    font-size: 45px;
+    font-weight: bold;
+    color: red;
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav {
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the nav */
+    width: max-content;
+    height: max-content; /* Keeps it only as wide as needed */
+    background: ##111;
+    padding: 15px 30px;
+    border-radius: 30px; /* Adds a nice rounded look */
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    gap: 20px; /* Adds spacing between nav items */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 100px 10%;
+}
+
+/* Flexbox for Image + Text */
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+/* Profile Picture */
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgb(179, 179, 179);
+    
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Text */
+.hero-text h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0px;
+}
+#j{
+    color:red;
+}
+
+.hero-text h2 {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    
+}
+.location{
+    margin-top: 0px;
+}
+
+/* Download CV Button */
+.cv-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.cv-button:hover {
+    background: #ff9900;
+}
+
+
+
+
+/* Projects Section */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Spacing between projects */
+    padding: 50px 10%;
+}
+
+/* Individual Project Layout */
+.project {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between image & text */
+}
+
+/* Project Image */
+.project img {
+    width: 50%; /* Big image on the left */
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Project Info */
+.project-info {
+    width: 50%;
+}
+
+.project-info h2 {
+    font-size: 24px;
+    color: white;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+}
+.project-pic{
+    height:450px;
+    width:40px;
+}
+/* Funky Heading for Design Projects */
+.funky-heading {
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ff4d00;
+    position: relative;
+    margin-bottom: 30px;
+    font-family: "Poppins", sans-serif;
+    text-shadow: 3px 3px 10px rgba(255, 77, 0, 0.8);
+}
+
+/* Underline Animation */
+.funky-heading::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, #ff4d00, #ff9900);
+    transform: translateX(-50%);
+    animation: underline-glow 1.5s infinite alternate ease-in-out;
+}
+/* About Me Section - Centered */
+/* About Me Section - Image Left, Stacked Text */
+#about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+    background: #111;
+    color: #fff;
+    padding: 50px 10%;
+}
+.about-container {
+    display: flex;
+    align-items: flex-start; /* Align text to the top */
+    gap: 40px;
+    max-width: 900px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+}
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.about-text p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+.btn {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #ff4747;
+}
+.skills-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+.skill-icon:hover {
+    transform: scale(1.1);
+}
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: #111;
+    color: white;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    color: red;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.social-links a {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 120px;
+}
+
+.contact-form button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: darkred;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: white;
+    font-size: 1rem;
+    border-top: 20px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+@keyframes underline-glow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 77, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 153, 0, 0.9);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column; /* Stack images and text on smaller screens */
+        text-align: center;
+    }
+
+    .project img, .project-info {
+        width: 100%;
+    }
+}
+
+/* Blinking & Sliding Funky Effect */
+
+#changing-text {
+    position: absolute;
+    width:100%;
+   text-align: left;
+    transition: opacity 0.5s ease-in-out;
+}
+@keyframes fadeText {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
